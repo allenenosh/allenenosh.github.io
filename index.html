@@ -51,30 +51,5 @@
     <div class="footer">
         <p id="countdown"></p>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Function to update the countdown
-            function updateCountdown() {
-                // Calculate remaining time until the year 3000
-                var now = new Date();
-                var year3000 = new Date(3000, 0, 1); // January 1, 3000
-                var timeDifference = year3000 - now;
-                var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-                
-                // Update the countdown display
-                var countdownString = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds";
-                document.getElementById('countdown').textContent = 'World ends in: ' + countdownString;
-            }
-            
-            // Update the countdown every second
-            setInterval(updateCountdown, 1000);
-            
-            // Initial call to display the countdown immediately
-            updateCountdown();
-        });
-    </script>
 </body>
 </html>
